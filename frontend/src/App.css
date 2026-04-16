@@ -1,0 +1,218 @@
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background: url("/public/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.landingPageContainer nav {
+  padding-inline: 1.2rem;
+  padding-block: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.6rem;
+  cursor: pointer;
+
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  height: 80vh;
+  align-items: center;
+}
+
+.landingMainContainer>div:nth-child(1) {
+  font-size: 2.2rem;
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] {
+  background: #D97500;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 1.9rem;
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.landingMainContainer>div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  text-align: center;
+
+}
+.meetContainer {
+  display: flex;
+  padding-inline: 20px;
+  height: 80vh;
+  gap: 10vw;
+  justify-content: center;
+}
+
+
+
+.leftPanel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+}
+
+.rightPanel > img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Google Meet Interface Styles */
+.googleMeetContainer {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.meetHeader {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.meetTitle {
+  color: #1a73e8;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.meetMainContent {
+  margin-top: 20px;
+}
+
+.sectionTitle {
+  color: #202124;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+.meetingOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.meetingOptionCard {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.meetingOptionCard:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transform: translateY(-1px);
+}
+
+.meetingOptionCard .MuiCardContent-root {
+  padding: 20px;
+}
+
+.meetingOptionCard .MuiTypography-h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #202124;
+}
+
+.meetingOptionCard .MuiTypography-body2 {
+  color: #5f6368;
+  margin-top: 4px;
+}
+
+.existingMeetings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meetingCard {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.meetingCard:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.meetingCard .MuiCardContent-root {
+  padding: 16px 20px;
+}
+
+.meetingCard .MuiTypography-h6 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #202124;
+}
+
+.meetingCard .MuiTypography-body2 {
+  color: #5f6368;
+  font-size: 0.75rem;
+}
+
+.meetingCard .MuiButton-root {
+  text-transform: none;
+  font-weight: 500;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+}
+
+.meetingCard .MuiIconButton-root {
+  padding: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .meetMainContent {
+    margin-top: 10px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+  
+  .meetTitle {
+    font-size: 2rem;
+  }
+}
