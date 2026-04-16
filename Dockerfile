@@ -1,0 +1,12 @@
+FROM maven:3.9.9-eclipse-temurin-17 AS build
+
+WORKDIR /app
+COPY backend /app
+RUN mvn clean package -DskipTests
+
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+
+CMD ["java", "-jar", "app.jar"]
