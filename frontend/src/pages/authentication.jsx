@@ -214,8 +214,13 @@ export default function Authentication() {
     };
 
     const handleOAuthLogin = (provider) => {
-        window.location.href = `http://localhost:8080/oauth2/authorization/${provider}`;
-    };
+    const BASE_URL =
+        process.env.NODE_ENV === "production"
+            ? "https://vibemeet-complete-6.onrender.com"
+            : "http://localhost:8080";
+
+    window.location.href = `${BASE_URL}/oauth2/authorization/${provider}`;
+};
 
     // ── Helper: character counter color ──────────────────────────────────────
     const counterColor = (len) => {
