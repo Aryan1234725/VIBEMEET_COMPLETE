@@ -1,7 +1,10 @@
 import axios from 'axios';
 
 // Base URL for the backend API
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/api/v1';
+const API_BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://vibemeet-complete-6.onrender.com/api/v1"
+    : "http://localhost:8080/api/v1";
 
 // Create axios instance with default configuration
 const api = axios.create({
